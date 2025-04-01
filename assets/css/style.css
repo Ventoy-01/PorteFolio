@@ -1,0 +1,267 @@
+/*--------------- index----------------------- */
+.contenu-principal {
+    display: flex;
+    justify-content: space-between;
+    /* Espacement entre les sections */
+    /* align-items: center;   */
+    /* Centrer les éléments verticalement */
+    height: 100vh;
+    /* Hauteur de la section principale */
+}
+
+/* Section Hero */
+.hero {
+    display: flex;
+    padding-left: 20px;
+    color: white;
+    width: 48%;
+    /* Occupe 48% de l'espace de la div parent */
+}
+
+
+.hero h1 {
+    font-size: 2.5rem;
+    padding-top: 5%;
+    padding-bottom: 3%;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    padding-top: 3%;
+    line-height: 1.5;
+    /* Espacement entre les lignes */
+}
+
+.hero p a {
+    color: #3498db;
+    /* Couleur du lien */
+    text-decoration: none;
+    /* Pas de soulignement */
+}
+
+/* Section Image */
+.image {
+    align-items: center;
+    justify-content: center;
+    width: 37%;
+    /* Occupe 37% de l'espace de la div parent */
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 10px;
+    margin-top: 7%;
+}
+
+.image img {
+    width: 82%;
+    height: 97%;
+    /* Ajuste la hauteur de l'image */
+    object-fit: cover;
+    /* Assure que l'image garde son ratio */
+    justify-content: center;
+    /* align-items: center; */
+    border-radius: 50%;
+    /* Coins arrondis */
+}
+
+
+/* ----------------------------competences---------------------- */
+/* Styles généraux */
+.skills-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    text-align: center;
+    /* background-color: #f4f4f4; */
+}
+
+.skills-intro,
+.skills-conclusion {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fffefe;
+    margin-bottom: 30px;
+}
+
+/* Conteneur des compétences */
+.skill-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(57, 65, 65);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards;
+}
+
+/* Alternance des éléments gauche-droite */
+.skill-container:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* Texte */
+.skill-text {
+    width: 50%;
+    padding: 20px;
+    text-align: left;
+}
+
+.skill-text h3 {
+    font-size: 1.8rem;
+    color: #007BFF;
+}
+
+.skill-text p {
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+/* Image */
+.skill-image {
+    width: 50%;
+    text-align: center;
+}
+
+.skill-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.skill-image img:hover {
+    transform: scale(1.01);
+}
+
+/* Animation Fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+    .skill-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .skill-text, 
+    .skill-image {
+        width: 100%;
+    }
+
+    .skill-text {
+        padding: 10px;
+    }
+
+    .skill-image img {
+        max-width: 60px;
+    }
+}
+/* ----------------------------projets-------------------------- */
+
+/*----------------------------- contact-------------------------- */
+/* Styles généraux */
+main {
+    color: #ffffff;
+    /* background-color: #1b1e27; */
+    text-align: center;
+}
+
+.contact-header h1{
+    font-size: 2rem;
+    color: #ffcc00;
+}
+.contact-header p {
+    font-size: 1.3rem;
+    padding-bottom: 20px;
+    color: #e7d8d8;
+}
+
+
+.fa-phone-volume {
+    font-size: 35px;
+    margin-right: 10px;
+}
+
+.form-container {
+    max-width: 500px;
+    background: rgba(10, 29, 46, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.2);
+    margin: auto;
+}
+
+.form-container p {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    background: #f8f9fa;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #0056b3;
+    color: white;
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #007BFF;
+}
+
+/* Section 4: Contact direct */
+.contact-direct {
+    text-align: center;
+    font-size: 1rem;
+    padding: 30px 0;
+}
+
+.contact-direct a {
+    color: #ffcc00;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact-direct a:hover {
+    text-decoration: underline;
+}
