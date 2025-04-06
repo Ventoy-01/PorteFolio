@@ -45,13 +45,18 @@ header nav ul li a.active {
     color: #3498db; /* Couleur de l'onglet actif */
     border-bottom: 3px solid #3498db; /* Ligne sous l'onglet actif */
 }
+/* Hamburger caché par défaut */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
 
 .name {
     font-size: 1rem;
     color: #1061ec; /* Couleur du nom */
 }
-
-
 
 footer {
     background-color: #171c28;
@@ -111,12 +116,7 @@ footer {
     color: white;
 }
 
-.social-links a .fab{
-    padding-right: 10px; /* Espace entre l'icône et le texte */
-    transition: color 0.3s ease; /* Transition pour l'effet de survol */
- }
-
-.contact a .fas{
+.social-links a .fab, .fas {
     padding-right: 10px; /* Espace entre l'icône et le texte */
     transition: color 0.3s ease; /* Transition pour l'effet de survol */
  }
@@ -126,5 +126,42 @@ footer {
     margin-top: 20px;
     padding-top: 10px;
     border-top: 2px solid #77859f;
+}
+
+/* responsivite */
+
+
+/* Responsive menu */
+@media screen and (max-width: 768px) {
+    nav ul.nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #0f0f36;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        width: 200px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        z-index: 1000;
+    }
+
+    nav ul.nav-links.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: right;
+    }
 }
 

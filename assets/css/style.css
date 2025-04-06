@@ -2,11 +2,8 @@
 .contenu-principal {
     display: flex;
     justify-content: space-between;
-    /* Espacement entre les sections */
-    /* align-items: center;   */
-    /* Centrer les éléments verticalement */
-    height: 100vh;
-    /* Hauteur de la section principale */
+    /* max-height: 100vh; */
+    width: 95%;
 }
 
 /* Section Hero */
@@ -15,7 +12,6 @@
     padding-left: 20px;
     color: white;
     width: 48%;
-    /* Occupe 48% de l'espace de la div parent */
 }
 
 
@@ -29,14 +25,11 @@
     font-size: 1.2rem;
     padding-top: 3%;
     line-height: 1.5;
-    /* Espacement entre les lignes */
 }
 
 .hero p a {
     color: #3498db;
-    /* Couleur du lien */
     text-decoration: none;
-    /* Pas de soulignement */
 }
 
 /* Section Image */
@@ -44,8 +37,7 @@
     align-items: center;
     justify-content: center;
     width: 37%;
-    /* Occupe 37% de l'espace de la div parent */
-    height: 400px;
+    height: 380px;
     background-size: cover;
     background-position: center;
     margin-right: 10px;
@@ -66,13 +58,11 @@
 
 
 /* ----------------------------competences---------------------- */
-/* Styles généraux */
 .skills-section {
     max-width: 1200px;
     margin: 0 auto;
     padding: 50px 20px;
     text-align: center;
-    /* background-color: #f4f4f4; */
 }
 
 .skills-intro,
@@ -83,12 +73,24 @@
     margin-bottom: 30px;
 }
 
+.skills-category {
+    margin-bottom: 50px;
+}
+
+.skills-category h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #007BFF;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
 /* Conteneur des compétences */
 .skill-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: rgb(57, 65, 65);
+    background: rgb(46, 52, 73);
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -98,14 +100,31 @@
     animation: fadeIn 1s forwards;
 }
 
-/* Alternance des éléments gauche-droite */
-.skill-container:nth-child(even) {
-    flex-direction: row-reverse;
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
 }
+
+.progress {
+    height: 100%;
+    background: linear-gradient(90deg, #007BFF, #00aaff);
+    text-align: center;
+    line-height: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+    transition: width 1.5s ease-in-out;
+}
+
 
 /* Texte */
 .skill-text {
-    width: 50%;
+    /* width: 50%; */
     padding: 20px;
     text-align: left;
 }
@@ -142,46 +161,106 @@
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-/* Responsivité */
-@media (max-width: 768px) {
-    .skill-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .skill-text, 
-    .skill-image {
-        width: 100%;
-    }
-
-    .skill-text {
-        padding: 10px;
-    }
-
-    .skill-image img {
-        max-width: 60px;
-    }
-}
 /* ----------------------------projets-------------------------- */
+/* Section Réalisations */
+.realisations-section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.realisations-section h2 {
+    font-size: 2.5rem;
+    color: #007BFF;
+    margin-bottom: 40px;
+}
+
+/* Grille responsive */
+.realisations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* Carte projet */
+.realisation-card {
+    background-color: #1b1e27;
+    color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.realisation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.realisation-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.realisation-card h3 {
+    font-size: 1.5rem;
+    margin: 15px 0 10px;
+    color: #ffcc00;
+}
+
+.realisation-card p {
+    font-size: 1rem;
+    padding: 0 15px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.realisation-card a {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.realisation-card a:hover {
+    background-color: #0056b3;
+}
+
+.realisation-conclusion {
+    margin-top: 60px;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #ccc;
+    border-top: 1px solid #444;
+}
+
 
 /*----------------------------- contact-------------------------- */
-/* Styles généraux */
 main {
     color: #ffffff;
     /* background-color: #1b1e27; */
     text-align: center;
 }
 
-.contact-header h1{
+.contact-header h1 {
     font-size: 2rem;
     color: #ffcc00;
 }
+
 .contact-header p {
     font-size: 1.3rem;
     padding-bottom: 20px;
@@ -264,4 +343,315 @@ button:hover {
 
 .contact-direct a:hover {
     text-decoration: underline;
+}
+
+/* ------------------------Responsive Design----------------- */
+
+
+/* -------------------------index---------------------- */
+
+@media (max-width: 1200px) {
+    .image {
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+        height: 40%;
+        background-size: cover;
+        background-position: center;
+        margin-right: 10px;
+        margin-top: 7%;
+    }
+    
+}
+
+
+@media (max-width: 768px) {
+    .contenu-principal {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .image {
+        width: 80%;
+        height: auto;
+        margin-right: 0;
+    }
+    
+    .skills-section,
+    .realisations-section {
+        padding: 20px;
+    }
+    
+    .form-container {
+        width: 90%;
+    }
+    
+    /* Exemple de taille flexible pour les titres */
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .skills-intro,
+    .skills-conclusion {
+        font-size: 1.2rem;
+    }
+    
+    .skill-text h3 {
+        font-size: 1.5rem;
+    }
+    
+    .skill-text p {
+        font-size: 1rem;
+    }
+    
+    .realisation-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .realisation-card p {
+        font-size: 0.9rem;
+    }
+    
+    /* Éléments de la page qui pourraient avoir un padding ou une marge réduite */
+    .contenu-principal {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 320px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+    
+    .hero p {
+        font-size: 0.9rem;
+    }
+    
+    .skills-intro,
+    .skills-conclusion {
+        font-size: 1rem;
+    }
+    
+    .skill-text h3 {
+        font-size: 1.2rem;
+    }
+    
+    .skill-text p {
+        font-size: 0.9rem;
+    }
+    
+    .realisation-card h3 {
+        font-size: 1rem;
+    }
+    
+    .realisation-card p {
+        font-size: 0.8rem;
+    }
+    
+    /* Réduction de l'espacement général */
+    .contenu-principal {
+        padding: 5px;
+    }
+}
+
+
+/* ------------------------competences---------------------- */
+
+/* À partir de 1200px et moins */
+@media (min-width : 891px) {
+
+    /* Alternance des éléments gauche-droite */
+    .skill-container:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+}
+
+@media (max-width: 1200px) {
+    .skills-section {
+        padding: 40px 15px;
+    }
+    
+    .skills-intro,
+    .skills-conclusion {
+        font-size: 1.4rem;
+    }
+
+    .skills-category h2 {
+        font-size: 1.8rem;
+    }
+
+    .skill-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    .skill-text {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .skill-image {
+        width: 90%;
+        margin-top: 20px;
+    }
+    .skill-image img {
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
+    }
+    .skill-image img:hover {
+        transform: scale(1.01);
+    }
+
+    .progress-bar {
+        height: 15px;
+    }
+
+    .progress {
+        font-size: 0.8rem;
+    }
+}
+
+/* À partir de 768px et moins */
+@media (max-width: 768px) {
+    .skills-section {
+        padding: 30px 10px;
+    }
+
+    .skills-intro,
+    .skills-conclusion {
+        font-size: 1.2rem;
+    }
+
+    .skills-category h2 {
+        font-size: 1.6rem;
+    }
+
+    .skill-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    .skill-text {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .skill-image {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .progress-bar {
+        height: 15px;
+    }
+
+    .progress {
+        font-size: 0.9rem;
+    }
+}
+
+/* À partir de 480px et moins */
+@media (max-width: 480px) {
+    .skills-section {
+        padding: 20px 10px;
+    }
+
+    .skills-intro,
+    .skills-conclusion {
+        font-size: 1rem;
+    }
+
+    .skills-category h2 {
+        font-size: 1.4rem;
+    }
+
+    .skill-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .skill-text {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .skill-image {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .progress-bar {
+        height: 12px;
+    }
+
+    .progress {
+        font-size: 0.8rem;
+    }
+}
+
+/* À partir de 320px et moins */
+@media (max-width: 320px) {
+    .skills-section {
+        padding: 15px 5px;
+    }
+
+    .skills-intro,
+    .skills-conclusion {
+        font-size: 0.9rem;
+    }
+
+    .skills-category h2 {
+        font-size: 1.2rem;
+    }
+
+    .skill-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    .skill-text {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .skill-image {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .progress-bar {
+        height: 10px;
+    }
+
+    .progress {
+        font-size: 0.7rem;
+    }
 }

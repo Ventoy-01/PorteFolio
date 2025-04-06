@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,21 +14,92 @@
 
 
 </head>
+
 <body>
     <header>
         <nav>
             <div class="logo">
                 <h1><a href="./index.html"> <code>&lt;/&gt;</code> Jonas CLOCIN</a></h1>
             </div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
+            <div class="hamburger" onclick="toggleMenu()">
+                &#9776;
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
                 <li><a href="skills.html">Compétences</a></li>
                 <li><a class="active" href="projects.html">Réalisations</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-    
+
+
+    <!-- Tu peux inclure ici ton header global -->
+
+    <main>
+        <section class="realisations-section">
+            <h2>Mes Réalisations</h2>
+
+            <div class="realisations-grid">
+
+                <div class="realisation-card">
+                    <img src="./assets/images/portefolio.PNG" alt="Mon Portfolio">
+                    <h3>Portfolio personnel</h3>
+                    <p>Un site web responsive créé avec HTML, CSS et un peu de JavaScript pour présenter mes
+                        compétences.</p>
+                    <a href="#">Voir plus</a>
+                </div>
+
+                <div class="realisation-card">
+                    <img src="img/projet2.jpg" alt="KayPam">
+                    <h3>KayPam</h3>
+                    <p>Développée  avec Laravel, MySQL..., Une agence immobiliere qui permet d'acheter, de vendre et de louer des maison, apartement ou terrain.
+                    </p>
+                    <a href="#">Voir plus</a>
+                </div>
+                <div class="realisation-card">
+                    <img src="img/projet2.jpg" alt="Gestion pret">
+                    <h3>Application de gestion</h3>
+                    <p>Développée avec Java, elle permet de gérer des prêts d’étudiants et des remboursements.
+                    </p>
+                    <a href="#">Voir plus</a>
+                </div>
+                <div class="realisation-card">
+                    <img src="img/projet2.jpg" alt="Cafeteria CHCL">
+                    <h3>Cafeteria CHCL</h3>
+                    <p>Développée avec PHP et MySQL, elle permet de gérer des ventes et verifier la croissance du Cafeteria.
+                    </p>
+                    <a href="#">Voir plus</a>
+                </div>
+
+                <div class="realisation-card">
+                    <img src="img/projet3.jpg" alt="Blog">
+                    <h3>Blog technique</h3>
+                    <p>Créé avec Django, ce blog permet aux utilisateurs de publier des articles et commenter.</p>
+                    <a href="#">Voir plus</a>
+                </div>
+
+                <div class="realisation-card">
+                    <img src="img/projet4.jpg" alt="Projet 4">
+                    <h3>Site e-commerce</h3>
+                    <p>Un site de vente en ligne de parfums et accessoires, avec panier, filtres et espace admin (HTML,
+                        Django, MySQL).</p>
+                    <a href="#">Voir plus</a>
+                </div>
+
+            </div>
+
+            <div class="realisation-conclusion">
+                <p>
+                  Chaque projet présenté ici reflète ma passion pour l'informatique et mon engagement à toujours apprendre et créer. 
+                  N'hésitez pas à me contacter pour en savoir plus ou collaborer ensemble sur de nouveaux défis.
+                </p>
+              </div>
+              
+        </section>
+    </main>
+    <!--  -->
+
     <footer>
         <div class="footer-container">
             <div class="footer-section about">
@@ -49,11 +121,15 @@
             <div class="footer-section social">
                 <h2>Suivez-moi</h2>
                 <div class="social-links">
-                    <a href="https://facebook.com/nathan.body.14/" target="_blank"><i class="fab fa-facebook-f"></i>Facebook</a>
+                    <a href="https://facebook.com/nathan.body.14/" target="_blank"><i
+                            class="fab fa-facebook-f"></i>Facebook</a>
                     <a href="https://twitter.com/Ventoy01/" target="_blank"><i class="fab fa-twitter"></i>Twitter</a>
-                    <a href="https://www.tiktok.com/@nathanbody01/" target="_blank"><i class="fab fa-tiktok"></i>Tiktok</a>
-                    <a href="https://instagram.com/ventoy_01/" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
-                    <a href="https://www.threads.net/ventoy_01/" target="_blank"><i class="fab fa-threads"></i>Threads</a>
+                    <a href="https://www.tiktok.com/@nathanbody01/" target="_blank"><i
+                            class="fab fa-tiktok"></i>Tiktok</a>
+                    <a href="https://instagram.com/ventoy_01/" target="_blank"><i
+                            class="fab fa-instagram"></i>Instagram</a>
+                    <a href="https://www.threads.net/ventoy_01/" target="_blank"><i
+                            class="fab fa-threads"></i>Threads</a>
                 </div>
             </div>
 
@@ -70,6 +146,9 @@
             <p>&copy; 2025 Jonas CLOCIN - Tous droits réservés.</p>
         </div>
     </footer>
+    <script src="./assets/js/script.js"></script>
+
 
 </body>
+
 </html>

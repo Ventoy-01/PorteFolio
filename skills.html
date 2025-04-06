@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jonas |Skills</title>
+    <title>Jonas | Skills</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
 
-    <link rel="shortcut icon" href="./assets/./assets/images/icone.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/images/icone.ico" type="image/x-icon">
 
 
 </head>
+
 <body>
     <header>
         <nav>
+
             <div class="logo">
                 <h1><a href="./index.html"> <code>&lt;/&gt;</code> Jonas CLOCIN</a></h1>
             </div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
+            <div class="hamburger" onclick="toggleMenu()">
+                &#9776; 
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
                 <li><a class="active" href="skills.html">Compétences</a></li>
                 <li><a href="projects.html">Réalisations</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -33,102 +39,163 @@
         <section class="skills-intro">
             <p>Découvrez mes compétences techniques en développement et programmation.</p>
         </section>
-    
-        <!-- HTML & CSS -->
-        <div class="skill-container">
-            <div class="skill-text">
-                <h3>HTML & CSS</h3>
-                <p>Création de pages web modernes et responsives avec HTML5 et CSS3.</p>
+
+        <!-- 🟢 Front-End -->
+        <section class="skills-category">
+            <h2>Développement Front-End</h2>
+            <div class="skill-container">
+                <div class="skill-text">
+                    <h3>HTML & CSS</h3>
+                    <p>Création de pages web modernes et responsives avec HTML5 et CSS3. Maîtrise des grilles CSS
+                        (Flexbox, Grid) et des préprocesseurs comme SASS.</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 90%;">90%</div>
+                    </div>
+                </div>
+                <div class="skill-image">
+                    <img src="./assets/images/html_css.jpg" alt="HTML & CSS">
+                </div>
             </div>
-            <div class="skill-image">
-                <img src="./assets/images/html_css.jpg" alt="HTML & CSS">
+
+            <div class="skill-container">
+                <div class="skill-text">
+                    <h3>JavaScript</h3>
+                    <p>Développement interactif et dynamique avec JavaScript moderne (ES6+). Manipulation du DOM,
+                        gestion des événements et utilisation des frameworks comme React.</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 85%;">85%</div>
+                    </div>
+                </div>
+                <div class="skill-image">
+                    <img src="./assets/images/javascript.jpg" alt="JavaScript">
+                </div>
             </div>
-        </div>
-    
-        <!-- JavaScript -->
-        <div class="skill-container">
-            <div class="skill-text">
-                <h3>JavaScript</h3>
-                <p>Développement interactif et dynamique avec ES6+, DOM et API.</p>
+        </section>
+
+        <!-- 🔵 Back-End -->
+        <section class="skills-category">
+            <h2>Développement Back-End</h2>
+            <div class="skill-container">
+                <div class="skill-text">
+                    <h3>PHP</h3>
+                    <p>Développement de sites dynamiques et sécurisés avec PHP. Utilisation de frameworks comme Laravel
+                        et gestion des API REST.</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%;">80%</div>
+                    </div>
+                </div>
+                <div class="skill-image">
+                    <img src="./assets/images/php.jpg" alt="PHP">
+                </div>
             </div>
-            <div class="skill-image">
-                <img src="././assets/images/javascript.jpg" alt="JavaScript">
+
+            <div class="skill-container">
+                <div class="skill-text">
+                    <h3>Python</h3>
+                    <p>Développement backend avec Django et Flask. Automatisation de tâches et création d’API
+                        performantes.</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 88%;">88%</div>
+                    </div>
+                </div>
+                <div class="skill-image">
+                    <img src="./assets/images/python.jpg" alt="Python">
+                </div>
             </div>
-        </div>
-        <!-- php -->
-        <div class="skill-container">
-            <div class="skill-text">
-                <h3>PHP</h3>
-                <p>Développement interactif et dynamique avec PHP.</p>
+
+            <div class="skill-container">
+                <div class="skill-text">
+                    <h3>Java</h3>
+                    <p>Conception d’applications robustes avec Java. Expérience avec Spring Boot pour la création de
+                        services web performants.</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 82%;">82%</div>
+                    </div>
+
+                </div>
+                <div class="skill-image">
+                    <img src="./assets/images/java.jpg" alt="Java">
+                </div>
             </div>
-            <div class="skill-image">
-                <img src="./assets/images/php.jpg" alt="php">
+        </section>
+
+        <!-- 🔴 Intelligence Artificielle -->
+        <section class="skills-category">
+            <h2>Intelligence Artificielle & Machine Learning</h2>
+            <div class="skill-container">
+                <div class="skill-text">
+                    <h3>Python & IA & R Language</h3>
+                    <p>Utilisation de TensorFlow et OpenCV pour l’apprentissage automatique et la vision par ordinateur.</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 88%;">88%</div>
+                    </div>
+                </div>
+                <div class="skill-image">
+                    <img src="./assets/images/IA.jpg" alt="IA">
+                </div>
             </div>
-        </div>
-    
-        <!-- Python -->
-        <div class="skill-container">
-            <div class="skill-text">
-                <h3>Python</h3>
-                <p>Programmation backend, automatisation et intelligence artificielle avec Python.</p>
+        </section>
+
+        <!-- 🟡 Bases de Données -->
+        <section class="skills-category">
+            <h2>Gestion de Bases de Données</h2>
+            <div class="skill-container">
+                <div class="skill-text">
+                    <h3>MySQL & Oracle</h3>
+                    <p>Conception et gestion de bases de données relationnelles. Optimisation des requêtes SQL et
+                        administration avancée.</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 85%;">85%</div>
+                    </div>
+                </div>
+                <div class="skill-image">
+                    <img src="./assets/images/database.jpg" alt="Base de données">
+                </div>
             </div>
-            <div class="skill-image">
-                <img src="./assets/images/python.jpg" alt="Python">
+        </section>
+
+        <!-- 🟣 Réseaux & Administration Système -->
+        <section class="skills-category">
+            <h2>Réseaux & Administration Système</h2>
+            <div class="skill-container">
+                <div class="skill-text">
+                    <h3>Administration Réseaux</h3>
+                    <p>Gestion et sécurisation des réseaux informatiques sous Windows et Linux. Configuration de
+                        serveurs et dépannage réseau.</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%;">80%</div>
+                    </div>
+                </div>
+                <div class="skill-image">
+                    <img src="./assets/images/reseaux.jpg" alt="Réseaux">
+                </div>
             </div>
-        </div>
-    
-        <!-- Java -->
-        <div class="skill-container">
-            <div class="skill-text">
-                <h3>Java</h3>
-                <p>Développement d’applications robustes et scalables en Java.</p>
+
+            <div class="skill-container">
+                <div class="skill-text">
+                    <h3>Administration Serveur</h3>
+                    <p>Déploiement et gestion de serveurs Windows et Linux. Expérience en virtualisation et gestion des
+                        accès utilisateurs.</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 70%;">70%</div>
+                    </div>
+                </div>
+                <div class="skill-image">
+                    <img src="./assets/images/server.jpg" alt="Serveur">
+                </div>
             </div>
-            <div class="skill-image">
-                <img src="./assets/images/java.jpg" alt="Java">
-            </div>
-        </div>
-    
-        <!-- Bases de données -->
-        <div class="skill-container">
-            <div class="skill-text">
-                <h3>Base de données (MySQL, Oracle)</h3>
-                <p>Conception et gestion de bases de données relationnelles.</p>
-            </div>
-            <div class="skill-image">
-                <img src="./assets/images/database.jpg" alt="Base de données">
-            </div>
-        </div>
-        <!-- reseaux informatique -->
-        <div class="skill-container">
-            <div class="skill-text">
-                <h3>Administration des reseaux informatiques(Windows, Linux)</h3>
-                <p>Bien Administrer votre reseau informatique.</p>
-            </div>
-            <div class="skill-image">
-                <img src="./assets/images/reseaux.jpg" alt="reseaux">
-            </div>
-        </div>
-    
-        <!-- admserver -->
-        <div class="skill-container">
-            <div class="skill-text">
-                <h3>Administration server(Windows, Linux)</h3>
-                <p>Bien Administrer votre server.</p>
-            </div>
-            <div class="skill-image">
-                <img src="./assets/images/server.jpg" alt="server">
-            </div>
-        </div>
-    
+        </section>
+
         <!-- Conclusion -->
         <section class="skills-conclusion">
             <p>Ma passion pour le développement m’amène à explorer continuellement de nouvelles technologies.</p>
         </section>
     </main>
-    
 
-    
-    
+
+
+
+
     <footer>
         <div class="footer-container">
             <div class="footer-section about">
@@ -150,11 +217,15 @@
             <div class="footer-section social">
                 <h2>Suivez-moi</h2>
                 <div class="social-links">
-                    <a href="https://facebook.com/nathan.body.14/" target="_blank"><i class="fab fa-facebook-f"></i>Facebook</a>
+                    <a href="https://facebook.com/nathan.body.14/" target="_blank"><i
+                            class="fab fa-facebook-f"></i>Facebook</a>
                     <a href="https://twitter.com/Ventoy01/" target="_blank"><i class="fab fa-twitter"></i>Twitter</a>
-                    <a href="https://www.tiktok.com/@nathanbody01/" target="_blank"><i class="fab fa-tiktok"></i>Tiktok</a>
-                    <a href="https://instagram.com/ventoy_01/" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
-                    <a href="https://www.threads.net/ventoy_01/" target="_blank"><i class="fab fa-threads"></i>Threads</a>
+                    <a href="https://www.tiktok.com/@nathanbody01/" target="_blank"><i
+                            class="fab fa-tiktok"></i>TikTok</a>
+                    <a href="https://instagram.com/ventoy_01/" target="_blank"><i
+                            class="fab fa-instagram"></i>Instagram</a>
+                    <a href="https://www.threads.net/ventoy_01/" target="_blank"><i
+                            class="fab fa-threads"></i>Threads</a>
                 </div>
             </div>
 
@@ -171,6 +242,8 @@
             <p>&copy; 2025 Jonas CLOCIN - Tous droits réservés.</p>
         </div>
     </footer>
+    <script src="./assets/js/script.js"></script>
 
 </body>
+
 </html>
