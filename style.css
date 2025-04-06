@@ -128,6 +128,15 @@ footer {
     border-top: 2px solid #77859f;
 }
 
+/* bouton */
+button {
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+button:hover {
+    transform: scale(1.03);
+}
+
+
 /* responsivite */
 
 
