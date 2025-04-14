@@ -167,6 +167,57 @@
         transform: translateY(0);
     }
 }
+/* -----------------------cv--------------------------- */
+.cv-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    color: #7f98b3;
+}
+
+.cv-container h1 {
+    color: #007BFF;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.cv-container p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.cv-section {
+    margin-top: 30px;
+}
+
+.cv-section h2 {
+    color: #007BFF;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.cv-container ul li{
+    list-style: none;
+}
+
+.download-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    background: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.download-btn:hover {
+    background: #0056b3;
+}
 
 /* ----------------------------projets-------------------------- */
 /* Section Réalisations */
