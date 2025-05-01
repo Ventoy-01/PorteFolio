@@ -171,11 +171,11 @@
 .cv-container {
     max-width: 800px;
     margin: 50px auto;
-    background: #ffffff;
+    background: #32325a7b;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    color: #7f98b3;
+    box-shadow: 0 0 15px rgba(1, 5, 50, 0.904);
+    color: #e5ebf2;
 }
 
 .cv-container h1 {
@@ -310,6 +310,30 @@ main {
 .contact-header h1 {
     font-size: 2rem;
     color: #ffcc00;
+}
+
+.center-text {
+    width: 25%;
+    margin: 0 auto;
+}
+
+/* Typing Effect */
+.typing {
+    width: 0;
+    border-right: 0.1rem solid rgb(255, 196, 0);
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing steps(20, end) 10s infinite;
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+
+    50% {
+        width: 100%;
+    }
 }
 
 .contact-header p {
